@@ -17,12 +17,12 @@ UIKIT_EXTERN NSString * const KEY_KeyChainKey;
 /**
  用户名
  */
-UIKIT_EXTERN NSString * const KEY_USERNAME;
+UIKIT_EXTERN NSString * const KEY_UserName;
 
 /**
  密码
  */
-UIKIT_EXTERN NSString * const KEY_PASSWORD;
+UIKIT_EXTERN NSString * const KEY_Password;
 
 /**
  账号Token

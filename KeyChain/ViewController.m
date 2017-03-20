@@ -21,31 +21,43 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-#pragma mark - 存
+#pragma mark - 增
 - (IBAction)writeKeyChainBtnClick:(id)sender {
   
     NSMutableDictionary *userNameAndToken = [NSMutableDictionary dictionary];
-    [userNameAndToken setObject:@"userName" forKey:KEY_USERNAME];
+    [userNameAndToken setObject:@"userName" forKey:KEY_UserName];
     [userNameAndToken setObject:@"token" forKey:KEY_Token];
     NSLog(@"%@", userNameAndToken);
     
-    // A、将用户名和密码写入keychain
+    // 1、将用户名和密码写入keychain
     [GJyKeyChain save:KEY_KeyChainKey data:userNameAndToken];
 }
 
-#pragma mark - 取
+#pragma mark - 查
 - (IBAction)readKeyChainBtnClick:(id)sender {
 
     // 2、从keychain中读取用户名和密码
-    NSMutableDictionary *readUsernamePassword = (NSMutableDictionary *)[GJyKeyChain load:KEY_KeyChainKey];
-    NSString *userName = [readUsernamePassword objectForKey:KEY_USERNAME];
-    NSString *token = [readUsernamePassword objectForKey:KEY_Token];
+    NSMutableDictionary *userNameAndToken = (NSMutableDictionary *)[GJyKeyChain load:KEY_KeyChainKey];
+    NSString *userName = [userNameAndToken objectForKey:KEY_UserName];
+    NSString *token = [userNameAndToken objectForKey:KEY_Token];
     
-    NSLog(@"username = %@ && token = %@", userName, token);
+    NSLog(@"取值 : username = %@ && token = %@", userName, token);
 }
 
+#pragma mark - 改
+- (IBAction)KeyChainBtnClick:(id)sender {
+    
+    NSMutableDictionary *userNameAndToken = (NSMutableDictionary *)[GJyKeyChain load:KEY_KeyChainKey];
+    [userNameAndToken setObject:@"newUserName" forKey:KEY_UserName];
+    [userNameAndToken setObject:@"newToken" forKey:KEY_Token];
+    [GJyKeyChain save:KEY_KeyChainKey data:userNameAndToken];
+    
+    NSLog(@"修改后 : \nusername = %@ && token = %@", [userNameAndToken objectForKey:KEY_UserName], [userNameAndToken objectForKey:KEY_Token]);
+}
+
+
 #pragma mark - 删
-- (IBAction)deleteKeyBtnClick:(id)sender {
+- (IBAction)deleteKeyChainBtnClick:(id)sender {
     
     // 3、将用户名和密码从keychain中删除
     [GJyKeyChain delete:KEY_KeyChainKey];

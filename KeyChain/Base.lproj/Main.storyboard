@@ -22,14 +22,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J42-U7-U1j">
-                                <rect key="frame" x="137" y="100" width="100" height="100"/>
+                                <rect key="frame" x="137" y="70" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="SFa-n3-s7N"/>
                                     <constraint firstAttribute="height" constant="100" id="e8U-RT-0eL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="存">
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="增">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -42,13 +42,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHU-Nk-oyT">
-                                <rect key="frame" x="137" y="280" width="100" height="100"/>
+                                <rect key="frame" x="137" y="220" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="ID5-F8-0Wc"/>
                                     <constraint firstAttribute="width" constant="100" id="sQT-ct-8c7"/>
                                 </constraints>
-                                <state key="normal" title="取"/>
+                                <state key="normal" title="查"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="50"/>
@@ -58,12 +58,29 @@
                                     <action selector="readKeyChainBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="joK-3G-sGI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPD-DF-BHO">
+                                <rect key="frame" x="138" y="370" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Y4h-cn-5Uj"/>
+                                    <constraint firstAttribute="width" constant="100" id="nro-g3-BIF"/>
+                                </constraints>
+                                <state key="normal" title="改"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="KeyChainBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u43-gd-4kN"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Hf-jI-yzg">
-                                <rect key="frame" x="137" y="460" width="100" height="100"/>
+                                <rect key="frame" x="137" y="520" width="100" height="100"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="gmH-Y1-ogG"/>
-                                    <constraint firstAttribute="height" constant="100" id="jTZ-Fq-tsY"/>
+                                    <constraint firstAttribute="width" constant="100" id="df3-ya-6JD"/>
+                                    <constraint firstAttribute="height" constant="100" id="j1A-bc-iu7"/>
                                 </constraints>
                                 <state key="normal" title="删"/>
                                 <userDefinedRuntimeAttributes>
@@ -72,18 +89,20 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="deleteKeyBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bua-yQ-btr"/>
+                                    <action selector="deleteKeyChainBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rb8-50-L2S"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="3Hf-jI-yzg" firstAttribute="top" secondItem="FHU-Nk-oyT" secondAttribute="bottom" constant="80" id="5UJ-M1-mBJ"/>
-                            <constraint firstItem="3Hf-jI-yzg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DHg-qC-HcE"/>
+                            <constraint firstItem="GPD-DF-BHO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JQV-Br-vDb"/>
                             <constraint firstItem="FHU-Nk-oyT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NKH-S8-LAY"/>
-                            <constraint firstItem="J42-U7-U1j" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="hcJ-WZ-g4d"/>
+                            <constraint firstItem="GPD-DF-BHO" firstAttribute="top" secondItem="FHU-Nk-oyT" secondAttribute="bottom" constant="50" id="OcQ-7N-g29"/>
+                            <constraint firstItem="3Hf-jI-yzg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zu2-1r-W8J"/>
+                            <constraint firstItem="J42-U7-U1j" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="hcJ-WZ-g4d"/>
                             <constraint firstItem="J42-U7-U1j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kxM-Qo-TRY"/>
-                            <constraint firstItem="FHU-Nk-oyT" firstAttribute="top" secondItem="J42-U7-U1j" secondAttribute="bottom" constant="80" id="wXh-zo-jve"/>
+                            <constraint firstItem="3Hf-jI-yzg" firstAttribute="top" secondItem="GPD-DF-BHO" secondAttribute="bottom" constant="50" id="t3j-PM-pPo"/>
+                            <constraint firstItem="FHU-Nk-oyT" firstAttribute="top" secondItem="J42-U7-U1j" secondAttribute="bottom" constant="50" id="wXh-zo-jve"/>
                         </constraints>
                     </view>
                 </viewController>

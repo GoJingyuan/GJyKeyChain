@@ -9,8 +9,8 @@
 #import "Const.h"
 
 NSString * const KEY_KeyChainKey    =   @"ZSYX_MadeInCnmobi";
-NSString * const KEY_USERNAME       =   @"ZSYX_UserName";
-NSString * const KEY_PASSWORD       =   @"ZSYX_Password";
+NSString * const KEY_UserName       =   @"ZSYX_UserName";
+NSString * const KEY_Password       =   @"ZSYX_Password";
 NSString * const KEY_Token          =   @"ZSYX_Token";
 
 
